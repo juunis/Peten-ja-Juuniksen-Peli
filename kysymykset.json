@@ -1,0 +1,13 @@
+[
+  {
+    "kysymys": "Kysymys 1: Mikä on Suomen pääkaupunki?",
+    "vaihtoehdot": [" A: Tampere", " B: Helsinki", " C: Turku"],
+    "oikeav": "B"
+  },
+
+  {
+    "kysymys": "Kysymys 2: Mikä on Ison Britannian pääkaupunki?",
+    "vaihtoehdot": ["A: Liverpool", " B: Edinburgh", " C: Lontoo"],
+    "oikeav": "C"
+  }
+]
