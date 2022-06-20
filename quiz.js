@@ -18,6 +18,3 @@ if answer === "yes" {
 
 
 
-
-console.log("You scored " + score + " out of " + question + " questions!");
-
