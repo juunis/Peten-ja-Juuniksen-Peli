@@ -1,20 +1,22 @@
 // QUIZ GAME
 
 // For user inputs -> npm install prompt-sync
-
+const kysymysLista = require("./kysymykset.json");
 const prompt = require("prompt-sync")({ sigint: true });
-const answer = prompt("WELCOME TO OUR QUIZ! DO YOU WANT TO PLAY? ");
+const answer = prompt("HALUATKO PELATA? ");
 
-if answer === "yes" {
+if (answer === "joo") {
   let score = 0;
-  let question = 1;
-    let question1 = prompt("QUESTION 1:  A, B, C, or D? ");
-    if (question1 === "B") {
+  for (let i = 0; i < kysymysLista.length; i++) {
+    let question = prompt(`${kysymysLista[i].kysymys}
+    Vaihtoehdot: ${kysymysLista[i].vaihtoehdot}`);
+
+    if (question === kysymysLista[i].oikeav) {
       score++;
-    }
+      console.log(`Vastasit oikein!`);
+    } else console.log(`Väärin meni!`);
+  }
+  console.log(`Sait ${score}/${[kysymysLista.length]}.`);
+} else {
+  console.log("Ai etkö halua pelata? No, näkeemiin sitten!");
 }
-
-
-
-
-
